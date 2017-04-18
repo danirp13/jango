@@ -14,4 +14,14 @@ url(r'^$',views.first_view, name='first_view'),
 
 	url(r'^photo/(?P<pk>[0-9]+)/delete/$', views.PhotoDelete.as_view(), name='photo-delete'),
 
+#para crear
+	url(r'^photo/create/$', views.PhotoCreate.as_view(), name='photo-create'),
+	
+
+#category
+	url(r'^category/(?P<pk>[0-9]+)/update/$', views.CategoryUpdate.as_view(), name='category-update'),
+
+	url(r'^category/(?P<pk>[0-9]+)/delete/$', views.CategoryDelete.as_view(), name='category-delete'),
+	
+	url(r'^category/create/$', views.CategoryCreate.as_view(), name='category-create'),
 	]

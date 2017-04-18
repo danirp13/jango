@@ -4,6 +4,8 @@ from django.core.urlresolvers import reverse
 class Category(models.Model):
     """ Categorias para clasificar las fotos """
     name = models.CharField(max_length=50)
+    def get_absolute_url(self):
+        return reverse ('category-list')
     def __str__(self):             
         return self.name
 
